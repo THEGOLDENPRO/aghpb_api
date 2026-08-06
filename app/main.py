@@ -42,11 +42,7 @@ DESCRIPTION = """
   🐞 Report bugs [over here](https://github.com/THEGOLDENPRO/aghpb_api/issues).
 
 </div>
-
-<br>
-
-Rate limiting applies to the ``/random`` and ``/get`` endpoints. Check out the rate limits [over here](https://github.com/THEGOLDENPRO/aghpb_api/wiki#rate-limiting).
-"""
+""" + books.RATE_LIMITING_DESCRIPTION_MESSAGE
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

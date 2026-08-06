@@ -22,4 +22,4 @@ class Colours(StrEnum):
     def apply(self, string: str) -> str:
         """Returns that string but with this colour applied to it."""
 
-        return self.value + string + self.RESET_COLOUR.value # ty: ignore[unresolved-attribute]
+        return self.value + string + self.RESET_COLOUR

@@ -19,8 +19,23 @@ __all__ = ()
 
 router = APIRouter()
 
-GET_BOOK_RATE_LIMIT = config("GET_BOOK_RATE_LIMIT", default = 3, cast = int)
-RANDOM_BOOK_RATE_LIMIT = config("RANDOM_BOOK_RATE_LIMIT", default = 3, cast = int)
+DISABLE_RATE_LIMITING: float = config("DISABLE_RATE_LIMITING", default = False, cast = bool)
+
+GET_BOOK_RATE_LIMIT: int = config("GET_BOOK_RATE_LIMIT", default = 3, cast = int)
+GET_BOOK_RATE_INTERVAL: float = config("GET_BOOK_RATE_INTERVAL", default = 3.0, cast = float)
+
+RANDOM_BOOK_RATE_LIMIT: int = config("RANDOM_BOOK_RATE_LIMIT", default = 3, cast = int)
+RANDOM_BOOK_RATE_INTERVAL: float = config("RANDOM_BOOK_RATE_INTERVAL", default = 3.0, cast = float)
+
+RATE_LIMITING_DESCRIPTION_MESSAGE = "" if DISABLE_RATE_LIMITING else f"""
+<br>
+Rate limiting applies to the ``/random`` and ``/get`` endpoints for this instance:
+
+| Endpoint | Rate Limit |
+|----------|------------|
+| ``/random`` | **{RANDOM_BOOK_RATE_LIMIT}** requests per **{RANDOM_BOOK_RATE_INTERVAL}** seconds |
+| ``/get`` | **{GET_BOOK_RATE_LIMIT}** requests per **{GET_BOOK_RATE_INTERVAL}** seconds |
+"""
 
 ANIME_BOOK_200_RESPONSE = {
     "content": {
@@ -49,10 +64,15 @@ ProgrammingBooksDep = Annotated[ProgrammingBooks, Depends(get_programming_books)
             "description": "Rate limit exceeded!"
         }
     },
-    dependencies = [
+    dependencies = None if DISABLE_RATE_LIMITING else [
         Depends(
             RateLimiter(
-                limiter = Limiter(Rate(limit = RANDOM_BOOK_RATE_LIMIT, interval = 3000)),
+                limiter = Limiter(
+                    Rate(
+                        limit = RANDOM_BOOK_RATE_LIMIT,
+                        interval = int(RANDOM_BOOK_RATE_INTERVAL * 1000)
+                    )
+                ),
                 callback = rate_limit_exceeded_error
             )
         )
@@ -132,10 +152,15 @@ get_book_cache: dict[str, float] = {}
             "description": "Rate Limit exceeded"
         }
     },
-    dependencies = [
+    dependencies = None if DISABLE_RATE_LIMITING else [
         Depends(
             RateLimiter(
-                limiter = Limiter(Rate(limit = GET_BOOK_RATE_LIMIT, interval = 3000)),
+                limiter = Limiter(
+                    Rate(
+                        limit = GET_BOOK_RATE_LIMIT,
+                        interval = int(GET_BOOK_RATE_INTERVAL * 1000)
+                    )
+                ),
                 callback = rate_limit_exceeded_error
             )
         )

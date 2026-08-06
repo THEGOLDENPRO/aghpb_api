@@ -24,7 +24,7 @@ dependencies = [
     "pydantic~=2.13.2",
     "fastapi[standard]~=0.136.0",
     "fastapi-limiter~=0.2.0",
-    "pyrate-limiter~=4.1.0",
+    "pyrate-limiter~=4.4.0",
 ]
 dynamic = ["version"]
 
@@ -34,9 +34,8 @@ BugTracker = "https://github.com/THEGOLDENPRO/aghpb_api/issues"
 
 [dependency-groups]
 dev = [
-    "ty~=0.0.31",
+    "ty~=0.0.69",
     "ruff~=0.15.11",
-    "snakeviz~=2.2.2",
 ]
 
 [tool.setuptools.dynamic]
