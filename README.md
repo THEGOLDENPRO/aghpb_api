@@ -22,9 +22,10 @@ Pick the closest instance to you for FASTER ANIME GIRLS!
 | Country | URL | Hosted by | Notes |
 |:-----------:|-------|:-------------:|:---------:|
 | 🇬🇧 | [``https://api.devgoldy.xyz/aghpb/v1``](https://api.devgoldy.xyz/aghpb/v1) | [me](https://github.com/THEGOLDENPRO) | ⭐ Official Instance |
+| 🇫🇷 | [``https://aghpb.thenolle.com``](https://aghpb.thenolle.com) | [Nolly](https://github.com/thenolle) |
 | 🇸🇪 | [``https://aghpb.zeeraa.net``](https://aghpb.zeeraa.net) | [Zeeraa](https://github.com/AntonUden) |
 
-> Also do use these instances as backups incase my servers at https://api.devgoldy.xyz go down.
+> You can also use these instances as backups in case my servers at https://api.devgoldy.xyz go down.
 
 ## 💫 API Wrappers
 I was also even more bored so I decided to write an API wrapper in every mfing language I can possible, including those I've never really written in.
@@ -39,7 +40,9 @@ Then here are some community-made api wrappers **( thanks 💛 )**:
 - **☕ Java - [``AGHPB4J``](https://github.com/JoshiCodes/AGHPB4J)**
 
 ## 🖥️ Clients
-Clients made from fellow developers in the community:
+Some fellow developers in the community also got bored so they made some clients:
+- [AGHPB Frontend Web Page](https://aghpb.thenolle.com/browse/) ~ *Bringing anime girls holding programming books to your browser!*
+
 - [AGHPB Vencord Plugin](https://github.com/thenolle/vencord-plugins/tree/master/aghpb) ~ *A vencord command to send anime girls holding programming books directly from your discord client.*
 
 <img width="370" alt="vencord aghpb plugin" src="https://github.com/user-attachments/assets/6badd305-3f47-4e1c-9269-d40cead0509c" />
