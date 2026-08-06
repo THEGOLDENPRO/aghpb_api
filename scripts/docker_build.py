@@ -1,13 +1,22 @@
-import sys
-sys.path.insert(0, '.')
+# import sys
+# sys.path.insert(0, '.')
 
-import os
 import app
+from subprocess import check_call
 
-os.system(
-    f"docker buildx build -t devgoldy/aghpb_api:{app.__version__} ."
-)
+tags = [
+    f"devgoldy/aghpb_api:{app.__version__}",
+    "devgoldy/aghpb_api:latest"
+]
 
-os.system(
-    "docker buildx build -t devgoldy/aghpb_api:latest ."
-)
+for image_tag in tags:
+    check_call(
+        args = [
+            "docker",
+            "buildx",
+            "build",
+            "-t",
+            image_tag,
+            "."
+        ]
+    )

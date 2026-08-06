@@ -6,5 +6,8 @@ services:
             - 8000:8000
         # environment:
             # ROOT_PATH: "/v1/aghpb"
+            # DISABLE_RATE_LIMITING: false
             # RANDOM_BOOK_RATE_LIMIT: 3
+            # RANDOM_BOOK_RATE_INTERVAL: 3.0
             # GET_BOOK_RATE_LIMIT: 3
+            # GET_BOOK_RATE_INTERVAL: 3.0
