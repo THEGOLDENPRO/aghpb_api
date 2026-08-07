@@ -43,6 +43,8 @@ Then here are some community-made api wrappers **( thanks 💛 )**:
 Some fellow developers in the community also got bored so they made some clients:
 - [AGHPB Frontend Web Page](https://aghpb.thenolle.com/browse/) ~ *Bringing anime girls holding programming books to your browser!*
 
+<img width="500" alt="Screenshot_20260807_005426" src="https://github.com/user-attachments/assets/064abf32-f5ec-463e-bce3-1bbc25a2da05" />
+
 - [AGHPB Vencord Plugin](https://github.com/thenolle/vencord-plugins/tree/master/aghpb) ~ *A vencord command to send anime girls holding programming books directly from your discord client.*
 
 <img width="370" alt="vencord aghpb plugin" src="https://github.com/user-attachments/assets/6badd305-3f47-4e1c-9269-d40cead0509c" />
