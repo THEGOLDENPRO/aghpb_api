@@ -24,6 +24,7 @@ Pick the closest instance to you for FASTER ANIME GIRLS!
 | 🇬🇧 | [``https://api.devgoldy.xyz/aghpb/v1``](https://api.devgoldy.xyz/aghpb/v1) | [me](https://github.com/THEGOLDENPRO) | ⭐ Official Instance |
 | 🇫🇷 | [``https://aghpb.thenolle.com``](https://aghpb.thenolle.com) | [Nolly](https://github.com/thenolle) |
 | 🇸🇪 | [``https://aghpb.zeeraa.net``](https://aghpb.zeeraa.net) | [Zeeraa](https://github.com/AntonUden) |
+| 🇩🇪 | [``https://aghpb.amoe.cloud``](https://aghpb.amoe.cloud) | [Ananas](https://github.com/ananasmoe) |
 
 > You can also use these instances as backups in case my servers at https://api.devgoldy.xyz go down.
 
